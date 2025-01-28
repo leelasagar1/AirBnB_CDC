@@ -46,7 +46,7 @@
 					"name": "AlterRowForUpdate"
 				},
 				{
-					"name": "select1"
+					"name": "SelectRelevantColumns"
 				}
 			],
 			"scriptLines": [
@@ -135,8 +135,8 @@
 				"          country = DerivedColumns@country",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 sink(allowSchemaDrift: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectRelevantColumns",
+				"SelectRelevantColumns sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          booking_id as string,",

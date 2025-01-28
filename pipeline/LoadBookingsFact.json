@@ -19,6 +19,13 @@
 						"referenceName": "dataflow",
 						"type": "DataFlowReference"
 					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "AirBnBADLS",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "dataflowstagging"
+					},
 					"compute": {
 						"coreCount": 8,
 						"computeType": "General"
