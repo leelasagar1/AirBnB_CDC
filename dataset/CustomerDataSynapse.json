@@ -1,0 +1,16 @@
+{
+	"name": "CustomerDataSynapse",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AirBnBSynapseDWH",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "airbnb",
+			"table": "customer_dim"
+		}
+	}
+}
