@@ -1,0 +1,39 @@
+{
+	"name": "AirBnB CDC Pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "DimLoad",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "FactLoad",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "DimLoad",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
